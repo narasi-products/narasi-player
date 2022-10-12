@@ -1,0 +1,50 @@
+<template>
+  <div>
+    <video ref="videoPlayer" class="video-js"></video>
+  </div>
+</template>
+
+<script>
+
+import videojs from "video.js";
+import 'videojs-contrib-quality-levels';
+import 'videojs-hls-quality-selector';
+import "/public/theme/narasi/video-js.css";
+import "/public/theme/narasi/narasi.css";
+
+export default {
+  name: "NarasiPlayer",
+  props: {
+    options: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
+  },
+  data() {
+    return {
+      player: null,
+    };
+  },
+  mounted() {
+    this.player = videojs(this.$refs.videoPlayer, this.options, () => {
+      this.player.hlsQualitySelector({
+          displayCurrentQuality: true,
+      });
+    });
+  },
+  beforeDestroy() {
+    if (this.player) {
+      this.player.dispose();
+    }
+  },
+};
+</script>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+</style>
