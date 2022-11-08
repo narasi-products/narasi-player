@@ -2,6 +2,8 @@
   "name": "narasi-player",
   "description": "Narasi Player for Streaming VOD & Live",
   "version": "0.1.2",
+  "keywords": ["player", "narasi tv", "live streaming", "vod", "videojs"],
+  "license": "MIT",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",

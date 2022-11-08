@@ -1,17 +1,17 @@
 Narasi Player for Streaming VOD & Live base on See [Video.js](https://videojs.com).
 ## Setup
-```
+```sh
 yarn add narasi-player
 # Using npm
 npm install narasi-player
 ```
 
 ## Usage
-```
+```html
 <template>
-<div>
-    <narasi-player :options="videoOptions" @ready="player"/>
-</div>
+  <div>
+      <narasi-player :options="videoOptions" @ready="player"/>
+  </div>
 </template>
 
 <script>
@@ -31,10 +31,10 @@ export default {
         preload: "auto",
         width: '873px',
         height: '491px',
-        poster: 'https://storage.googleapis.com/narasi-non-production.appspot.com/vod/adbf9393bb09fe1b1ed54d252075509936578a00/poster.jpeg',
+        poster: 'https://example.com/poster.jpeg',
         sources: [
           {
-            src: 'https://storage.googleapis.com/narasi-non-production.appspot.com/vod/adbf9393bb09fe1b1ed54d252075509936578a00/playlist.m3u8', type: 'application/x-mpegURL'
+            src: 'https://example.com/playlist.m3u8', type: 'application/x-mpegURL'
           }
         ],
         html5: {
