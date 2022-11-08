@@ -1,4 +1,4 @@
-Narasi Player for Streaming VOD & Live base on See [Video.js](https://videojs.com).
+Narasi Player for Streaming VOD & Live base on [Video.js](https://videojs.com).
 ## Setup
 ```sh
 yarn add narasi-player
