@@ -1,13 +1,3 @@
-Narasi Player for Streaming VOD & Live base on See [Video.js](https://videojs.com).
-## Setup
-```
-yarn add narasi-player
-# Using npm
-npm install narasi-player
-```
-
-## Usage
-```
 <template>
 <div>
     <narasi-player :options="videoOptions" @ready="player"/>
@@ -55,7 +45,3 @@ export default {
   },
 }
 </script>
-```
-
-## Referency API
-See [Configuration Reference](https://docs.videojs.com/).

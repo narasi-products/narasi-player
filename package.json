@@ -1,6 +1,7 @@
 {
   "name": "narasi-player",
-  "version": "0.1.0",
+  "description": "Narasi Player for Streaming VOD & Live",
+  "version": "0.1.2",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -9,6 +10,7 @@
     "build-bundle": "vue-cli-service build --target lib --name narasi-player ./src/index.js"
   },
   "main": "./dist/narasi-player.common.js",
+  "repository": "https://github.com/narasi-products/narasi-player",
   "files": [
     "dist/*",
     "src/*",

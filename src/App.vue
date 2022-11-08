@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <NarasiPlayer :options="videoOptions"/>
+    <NarasiPlayer :options="videoOptions" @ready="player"/>
   </div>
 </template>
 
@@ -21,10 +21,10 @@ export default {
         preload: "auto",
         width: '873px',
         height: '491px',
-        poster: 'https://statik.tempo.co/data/2019/10/31/id_885345/885345_720.jpg',
+        poster: 'https://storage.googleapis.com/narasi-non-production.appspot.com/vod/adbf9393bb09fe1b1ed54d252075509936578a00/poster.jpeg',
         sources: [
           {
-            src: 'https://d322b885qvsbxg.cloudfront.net/GTV2021.m3u8', type: 'application/x-mpegURL'
+            src: 'https://storage.googleapis.com/narasi-non-production.appspot.com/vod/adbf9393bb09fe1b1ed54d252075509936578a00/playlist.m3u8', type: 'application/x-mpegURL'
           }
         ],
         html5: {
@@ -35,6 +35,16 @@ export default {
         
       }
     }
+  },
+  methods: {
+    player(player) {
+      player.on('play', (e) => {
+        console.log(e);
+      })
+    }
+  },
+  mounted() {
+    
   }
 }
 </script>

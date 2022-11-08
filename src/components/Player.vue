@@ -9,17 +9,18 @@
 import videojs from "video.js";
 import 'videojs-contrib-quality-levels';
 import 'videojs-hls-quality-selector';
-import "/public/theme/narasi/video-js.css";
-import "/public/theme/narasi/narasi.css";
+import '/public/theme/narasi/video-js.css';
+import '/public/theme/narasi/narasi.css';
 
 export default {
-  name: "NarasiPlayer",
+  name: "narasi-player",
   props: {
     options: {
       type: Object,
       default() {
         return {};
       },
+      
     },
   },
   data() {
@@ -33,6 +34,11 @@ export default {
           displayCurrentQuality: true,
       });
     });
+
+    this.player.on('ready', () => {
+      this.$emit('ready', this.player);
+    })
+
   },
   beforeDestroy() {
     if (this.player) {
@@ -41,10 +47,3 @@ export default {
   },
 };
 </script>
-
-<style>
-html, body {
-  margin: 0;
-  padding: 0;
-}
-</style>
