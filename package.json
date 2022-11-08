@@ -1,7 +1,7 @@
 {
   "name": "narasi-player",
   "description": "Narasi Player for Streaming VOD & Live",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "keywords": ["player", "narasi tv", "live streaming", "vod", "videojs"],
   "license": "MIT",
   "private": false,
