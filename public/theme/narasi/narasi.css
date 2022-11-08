@@ -276,10 +276,6 @@
   background-color: #4a25aa;
 }
 
-.video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-content {
-  margin-bottom: 7px !important;
-}
-
 .video-js .vjs-menu-button-popup .vjs-menu .vjs-menu-item.vjs-selected {
   background-color: #4a25aa;
   color: #fff;
