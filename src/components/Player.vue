@@ -6,9 +6,10 @@
 
 <script>
 
-import videojs from "video.js";
+import videojs from 'video.js';
 import 'videojs-contrib-quality-levels';
 import 'videojs-hls-quality-selector';
+import 'videojs-mobile-ui';
 import '/public/theme/narasi/video-js.css';
 import '/public/theme/narasi/narasi.css';
 
@@ -30,9 +31,12 @@ export default {
   },
   mounted() {
     this.player = videojs(this.$refs.videoPlayer, this.options, () => {
+      
       this.player.hlsQualitySelector({
           displayCurrentQuality: true,
       });
+
+      this.player.mobileUi();
     });
 
     this.player.on('ready', () => {

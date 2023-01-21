@@ -16,31 +16,21 @@ export default {
   data() {
     return {
       videoOptions: {
-        autoplay: false,
+        autoplay: true,
         controls: true,
-        preload: "auto",
-        width: '873px',
-        height: '491px',
-        poster: 'https://storage.googleapis.com/narasi-non-production.appspot.com/vod/adbf9393bb09fe1b1ed54d252075509936578a00/poster.jpeg',
+        // poster: 'https://storage.googleapis.com/narasi-production.appspot.com/files/2023/01/19/video/eka-kurniawan-trending-karena-ada-yang-salah-paham-kutipan-novelnya---narasi-newsroom-1674131124/poster.png',
         sources: [
           {
-            src: 'https://storage.googleapis.com/narasi-non-production.appspot.com/vod/adbf9393bb09fe1b1ed54d252075509936578a00/playlist.m3u8', type: 'application/x-mpegURL'
+            src: 'https://storage.googleapis.com/narasi-production.appspot.com/files/2023/01/19/video/eka-kurniawan-trending-karena-ada-yang-salah-paham-kutipan-novelnya---narasi-newsroom-1674128618/manifest.m3u8'
           }
         ],
-        html5: {
-          nativeAudioTracks: true,
-          nativeVideoTracks: true,
-          nativeTextTracks: true
-        },
         
       }
     }
   },
   methods: {
-    player(player) {
-      player.on('play', (e) => {
-        console.log(e);
-      })
+    player(e) {
+      console.log(e);
     }
   },
   mounted() {

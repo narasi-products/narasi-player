@@ -1,8 +1,16 @@
 {
   "name": "narasi-player",
   "description": "Narasi Player for Streaming VOD & Live",
-  "version": "1.0.1",
-  "keywords": ["player", "narasi tv", "live streaming", "vod", "videojs"],
+  "version": "1.0.2",
+  "keywords": [
+    "player",
+    "narasi tv",
+    "live streaming",
+    "vod",
+    "videojs",
+    "video vast",
+    "ads"
+  ],
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -36,6 +44,7 @@
     "video.js": "^7.15.4",
     "videojs-contrib-quality-levels": "^2.1.0",
     "videojs-hls-quality-selector": "^1.1.4",
+    "videojs-mobile-ui": "^0.7.0",
     "videojs-vast-vpaid": "^3.0.0-beta.8",
     "vue-template-compiler": "^2.6.11"
   },
