@@ -1,6 +1,6 @@
 <template>
   <div>
-    <video ref="videoPlayer" class="video-js"></video>
+    <video webkit-playsinline ref="videoPlayer" class="video-js"></video>
   </div>
 </template>
 
@@ -9,7 +9,6 @@
 import videojs from 'video.js';
 import 'videojs-contrib-quality-levels';
 import 'videojs-hls-quality-selector';
-import 'videojs-mobile-ui';
 import '/public/theme/narasi/video-js.css';
 import '/public/theme/narasi/narasi.css';
 
@@ -30,15 +29,17 @@ export default {
     };
   },
   mounted() {
-    this.player = videojs(this.$refs.videoPlayer, this.options, () => {
+    const container = this.$refs.videoPlayer;
+    this.player = videojs(container, this.options, () => {
       
+      container.playsinline = "playsinline";
       this.player.hlsQualitySelector({
           displayCurrentQuality: true,
       });
 
-      this.player.mobileUi();
+      this.player.playsinline(true);
     });
-
+    
     this.player.on('ready', () => {
       this.$emit('ready', this.player);
     })
