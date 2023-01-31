@@ -6,13 +6,8 @@
 }
 
 .vjs-touch-overlay .vjs-icon-placeholder {
-  display: none !important;
+  font-size: 60px;
 }
-
-.video-js .vjs-controls-disabled .vjs-big-play-button {
-  display: none !important
-}
-
 .video-js .vjs-control {
   width: 3em
 }

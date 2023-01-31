@@ -42,9 +42,11 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
     "video.js": "^7.15.4",
+    "videojs-contrib-ads": "^6.9.0",
     "videojs-contrib-quality-levels": "^2.1.0",
     "videojs-hls-quality-selector": "^1.1.4",
-    "videojs-vast-vpaid": "^3.0.0-beta.8",
+    "videojs-ima": "^2.1.0",
+    "videojs-mobile-ui": "^0.7.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
